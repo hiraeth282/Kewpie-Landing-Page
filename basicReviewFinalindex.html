@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kewpie Baby</title>
+
+    <style>
+      body {
+        background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1,
+      h2 {
+        color: #362391;
+        text-align: center;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      button {
+        display: inline-block;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding: 10px 20px;
+        border: #362391;
+        font-size: 18px;
+        color: #362391;
+        background-color: #a393eb;
+        opacity: 1;
+      }
+
+      button:hover {
+        cursor: pointer;
+        transition: all 200ms ease;
+        opacity: 0.8;
+      }
+
+      .image-text {
+        text-align: center;
+        color: #362391;
+      }
+
+      .pledge {
+        text-align: center;
+        color: #362391;
+        font-size: 20px;
+        text-align: center;
+        margin: 50px;
+      }
+
+      .response-buttons {
+        margin: 30px;
+      }
+
+      .signature {
+        font-family: "Courier New", Courier, monospace;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">Kewpie Baby</h1>
+    <hr />
+    <h2 class="heading">
+      I don't know much about Kewpie Baby, but it hardly matters!
+    </h2>
+
+    <div class="main-body">
+      <img
+        src="https://www.line-stickers.com/wp-content/uploads/2021/07/Kewpie-and-Vegetable-Friends-.png"
+        alt="Kewpie Baby Waves"
+        width="250"
+      />
+      <p class="image-text">Just look at how sassy he is!</p>
+      <img
+        src="https://4.bp.blogspot.com/-rlCgAa3bKzo/VfqzMPlGckI/AAAAAAAGK3I/8AFb-QQCb-I/s1600/TF003247.png"
+        alt="Kewpie Baby"
+        width="250"
+      />
+      <p class="image-text">
+        You can't <em>not love him</em> <br />
+        <strong>...can you?</strong>
+      </p>
+    </div>
+
+    <div class="pledge">
+      <span class="pledge-text"
+        >Will you pledge your allegiance to Kewpie Baby?</span
+      >
+      <div class="response-buttons">
+        <button class="yes-button">Yes!</button>
+        <button class="no-button">No</button>
+      </div>
+    </div>
+    <div class="signature">Coded by Evelyn Ewald</div>
+
+    <script>
+      function changePagePositive() {
+        let name = prompt("Great! What is your name?");
+        let span = document.querySelector("span.pledge-text");
+        span.innerHTML = `Great! Kewpie Baby loves you, ${name}!`;
+      }
+
+      function changePageNegative() {
+        let response = prompt("Are you sure?");
+        response = response.toLowerCase();
+        if (response === "no") {
+          changePagePositive();
+        } else {
+          let h1 = document.querySelector("h1.heading");
+          let h2 = document.querySelector("h2.heading");
+          let paragraphs = document.querySelectorAll("p.image-text");
+          let span = document.querySelector("span.pledge-text");
+          let buttons = document.querySelectorAll("button");
+
+          h1.innerHTML = "a̶̡̨͙͔͖̭̝̰̖̺̝͚̣͖̋̃̒̑͋̈́́͆͆̀̈́͘͘̕ͅř̸̨̤̻̘̮͎̇́͆̊͂e̶̠̅̀̓̈́͒̋̅͘͝͝ ̸̍̈́͊͑̈́̕͝ͅÿ̴̢̧̙͎̗͔̘̝͈͉͈̘͈́̾̾̊͌̌̐̓͜ọ̷̡̠̺̰̭͎͕͔̳̻̫́͋̈́̈́̎̃̕͝ȗ̴̝̔̊͗͐̔ ̶̜̰̻͇̪̪̆͂͂̊͆̂̑͑̅͐̽̽͑s̸̢͍̤̥͇̫̤̖̼̋̅̉͛́̂̾̀̽͛͜u̷͖̩̳͉͕̓͌̌͗̏͠͠r̶̡̡͖̞̦͊e̸̢̡̨̤͉̮̖̘̰̜͕̲̍́͋̕";
+          h2.innerHTML = "a̶̡̨͙͔͖̭̝̰̖̺̝͚̣͖̋̃̒̑͋̈́́͆͆̀̈́͘͘̕ͅř̸̨̤̻̘̮͎̇́͆̊͂e̶̠̅̀̓̈́͒̋̅͘͝͝ ̸̍̈́͊͑̈́̕͝ͅÿ̴̢̧̙͎̗͔̘̝͈͉͈̘͈́̾̾̊͌̌̐̓͜ọ̷̡̠̺̰̭͎͕͔̳̻̫́͋̈́̈́̎̃̕͝ȗ̴̝̔̊͗͐̔ ̶̜̰̻͇̪̪̆͂͂̊͆̂̑͑̅͐̽̽͑s̸̢͍̤̥͇̫̤̖̼̋̅̉͛́̂̾̀̽͛͜u̷͖̩̳͉͕̓͌̌͗̏͠͠r̶̡̡͖̞̦͊e̸̢̡̨̤͉̮̖̘̰̜͕̲̍́͋̕";
+
+          paragraphs.forEach((paragraph) => {
+            paragraph.textContent = "a̶̡̨͙͔͖̭̝̰̖̺̝͚̣͖̋̃̒̑͋̈́́͆͆̀̈́͘͘̕ͅř̸̨̤̻̘̮͎̇́͆̊͂e̶̠̅̀̓̈́͒̋̅͘͝͝ ̸̍̈́͊͑̈́̕͝ͅÿ̴̢̧̙͎̗͔̘̝͈͉͈̘͈́̾̾̊͌̌̐̓͜ọ̷̡̠̺̰̭͎͕͔̳̻̫́͋̈́̈́̎̃̕͝ȗ̴̝̔̊͗͐̔ ̶̜̰̻͇̪̪̆͂͂̊͆̂̑͑̅͐̽̽͑s̸̢͍̤̥͇̫̤̖̼̋̅̉͛́̂̾̀̽͛͜u̷͖̩̳͉͕̓͌̌͗̏͠͠r̶̡̡͖̞̦͊e̸̢̡̨̤͉̮̖̘̰̜͕̲̍́͋̕";
+          });
+          span.innerHTML = "y̶̭͍͈̟̻̘̰̪͍̜͈̿̅̽̍̿̒͘͝ō̶̹̄̒̃u̸̦̘͌̂͑̿̔̍̍̎̋̚̕͜'̶̘̪̙̱̠̩̊̿̑̎̑͛ŗ̷̛̥̦͕̹̉́́͒̌͒͝é̷̻͉̜͑̈́͒̈̉͐̈́̅͌̆̀ ̷̨̣̝̰̃͒m̴͍̣̰̰͙͚͇̾̏̊̓̓̎̇͋͒̾a̸͇͗͒̑̅̌̈́̄̈̿͗̑ǩ̵̡̢͈̖͈͉̭͑i̸͔̥̬̬͖̭͇̯̯͈̭̞̘̅̃͘͠n̶̟̯̠̥̠̺͑͛̋͋̋̀̕͝g̷̲̩̦̣͔̈́̐̐͗̂ ̶̛͕͎͗͑͑̈́̓͝ạ̸̥͐̎̇͛̅͌͋̈́̕͜͠ ̵͔̪̺̲̫͕̈͌̃̈̓͐͠ṁ̷̚͜͝͝i̵̧̱̞͇̣͕̯̬̣̖̣̗͛̇̾̕ş̴̛̳̥̙̻̪̥̲̘̻͎̗̈́̎̍̇̆̏̎̕͜t̷̢̢̢̼̠̤̞̦̼͖̺͇̅̓̊̀̍ͅa̶̢̗̞͌͌́̑́̓̌͑͊k̴̛̳̩̦͉̰͉͚̭̤̀͆̅̈́͊̓̽͑͛͆̊̂̀̕ë̶̞̖̣̰́͜";
+
+          buttons.forEach((button) => {
+            button.textContent = "I'm sorry";
+          });
+        }
+      }
+
+      let yesButton = document.querySelector(".yes-button");
+      yesButton.addEventListener("click", changePagePositive);
+
+      let noButton = document.querySelector(".no-button");
+      noButton.addEventListener("click", changePageNegative);
+    </script>
+  </body>
+</html>
